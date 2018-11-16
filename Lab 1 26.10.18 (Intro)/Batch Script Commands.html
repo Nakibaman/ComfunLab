@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://www.tutorialspoint.com/batch_script/batch_script_commands.htm -->
+<html style="" class=" js no-touch no-csstransforms3d csstransitions"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Basic -->
+
+<title>Batch Script Commands</title>
+<meta name="description" content="Batch Script Commands - Learn Batch Script starting from Overview, Environment, Commands, Files, Syntax, Variables, Comments, Strings, Arrays, Decision Making, Operators, DATE and TIME, Input / Output, Return Code, Functions, Process, Aliases, Devices, Registry, Network, Printing, Debugging, Logging.">
+<meta name="keywords" content="Batch Script, Tutorial, Overview, Environment, Commands, Files, Syntax, Variables, Comments, Strings, Arrays, Decision Making, Operators, DATE and TIME, Input / Output, Return Code, Functions, Process, Aliases, Devices, Registry, Network, Printing, Debugging, Logging.">
+<!--<base href="https://www.tutorialspoint.com/">--><base href=".">
+<link rel="shortcut icon" href="https://www.tutorialspoint.com/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="fb:app_id" content="471319149685276">
+<meta property="og:site_name" content="www.tutorialspoint.com">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="tutorialspoint.com">
+<script src="./Batch Script Commands_files/f(9).txt"></script><script src="./Batch Script Commands_files/ca-pub-7133395778201029.js.download"></script><script type="text/javascript" src="./Batch Script Commands_files/script-min-v4.js.download"></script>
+<link rel="stylesheet" href="./Batch Script Commands_files/style-min.css">
+<script>
+function openNav() {	
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("right_obs").style.display = "block";
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("right_obs").style.display = "none";
+}
+function close_obs_sidenav(){
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("right_obs").style.display = "none";
+}
+</script>
+<!-- Head Libs -->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]-->
+<style>
+select{ border:0 !important; outline: 1px inset black !important; outline-offset: -1px !important; }
+.btnsbmt{ background: #17c06a !important;}
+ul.nav-list.primary>li a.videolink{    background: none; margin: 0px; padding: 0px; border: 1px solid #d6d6d6;}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #17c06a url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #17c06a !important;}
+.submenu-item{ border-bottom: 2px solid #17c06a !important; border-top: 2px solid #17c06a !important }
+.ace_scroller{overflow: auto!important;}
+a.demo{font-family: "Open Sans",Arial,sans-serif; background:#17c06a; color:#fff; font-size:13px; padding:3px 10px; border:1px solid #d6d6d6; position:absolute; right:5px; margin:-6px 17px 0px 0px;}
+a.demo:hover{opacity:.8}
+</style>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+<link rel="preload" href="./Batch Script Commands_files/f(10).txt" as="script"><script type="text/javascript" src="./Batch Script Commands_files/f(10).txt"></script><link rel="preload" href="./Batch Script Commands_files/f(11).txt" as="script"><script type="text/javascript" src="./Batch Script Commands_files/f(11).txt"></script><link rel="preload" href="https://pagead2.googlesyndication.com/pagead/js/r20181107/r20180604/show_ads_impl.js" as="script"><link rel="preload" href="./Batch Script Commands_files/f(10).txt" as="script"><script type="text/javascript" src="./Batch Script Commands_files/f(10).txt"></script><link rel="preload" href="./Batch Script Commands_files/f(11).txt" as="script"><script type="text/javascript" src="./Batch Script Commands_files/f(11).txt"></script></head>
+<body onload="prettyPrint()" style="">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="./Batch Script Commands_files/loading-cg.gif" alt="" width="70" height="70">
+   </div>
+</div>
+<div id="right_obs" class="display-none" onclick="close_obs_sidenav()"></div>
+<header>
+   <div class="container">			
+      <h1 class="logo">
+      <a href="https://www.tutorialspoint.com/index.htm" title="tutorialspoint">
+      <img alt="tutorialspoint" src="./Batch Script Commands_files/logo.png">
+      </a>
+      </h1>			
+      <ul class="tp-inline-block pull-right" id="tp-head-icons">
+        <li>
+           <div class="tp-second-nav tp-display-none tp-pointer" onclick="openNav()">
+              <i class="fa fa-th-large fa-lg"></i>
+           </div>
+        </li>
+     </ul>
+     <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull" style="top: 24px!important"> <i class="icon icon-bars"></i> </button>
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li><a href="https://www.tutorialspoint.com/about/about_careers.htm" style="background: #fffb09; font-weight: bold;"><i class="icon icon-suitcase"></i> Jobs</a></li>
+            <li> <a target="_blank" href="https://www.tutorialspoint.com/programming_examples/"><i class="fa fa-cubes"></i> &nbsp;Examples</a> </li>
+            <li> <a href="https://www.tutorialspoint.com/whiteboard.htm"><img src="./Batch Script Commands_files/image-editor.png" alt="Whiteboard" title="Whiteboard"> &nbsp;Whiteboard</a> </li>
+            <li> <a href="https://www.tutorialspoint.com/netmeeting.php"><i class="fa-camera"></i> &nbsp;Net Meeting</a> </li>
+            <li> <a href="https://www.tutorialspoint.com/online_dev_tools.htm"> <i class="dev-tools-menu" style="opacity:.5"></i> Tools </a> </li>
+            <li> <a href="https://www.tutorialspoint.com/articles/index.php"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>            
+            <li class="top-icons">
+              <ul class="social-icons">
+              <li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+              <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+              <li class="twitter"><a href="https://www.twitter.com/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+              <li class="linkedin"><a href="https://www.linkedin.com/company/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+              <li class="youtube"><a href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint YouTube">YouTube</a></li>
+              </ul>
+           </li>
+         </ul>
+      </nav>
+    </div>
+     <div class="sidenav" id="mySidenav">
+     <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown no-sub-menu"> <a class="dropdown" href="https://www.tutorialspoint.com/index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://www.tutorialspoint.com/questions/index.php"><i class="fa fa-send"></i> Q/A </a> </li>
+               <li class="dropdown"><a class="dropdown" href="https://www.tutorialspoint.com/tutorialslibrary.htm"><span class="tut-lib"> Library </span></a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://www.tutorialspoint.com/videotutorials/index.htm"><i class="fa-toggle-right"></i> Videos </a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://www.tutorialspoint.com/tutor_connect/index.php"><i class="fa-user"> </i> Tutors</a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://www.tutorialspoint.com/codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://store.tutorialspoint.com/"><i class="fa-usd"></i> Store </a> </li>
+               <li class="dropdown no-sub-menu">
+                  <div class="searchform-popup">
+                     <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == &#39;Search your favorite tutorials...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Search your favorite tutorials...&#39;;}" autocomplete="off" style="">
+                     <div class="magnifying-glass"><i class="icon-search"></i> Search </div>
+                 </div>
+               </li>
+            </ul>
+         </nav>
+        </div>
+      </div>	
+     </div>	
+   	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="./Batch Script Commands_files/batch-script-mini-logo.jpg" alt="Batch Script Tutorial">
+</div>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Batch Script Tutorial</li>
+<li><a href="https://www.tutorialspoint.com/batch_script/index.htm">Batch Script - Home</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_overview.htm">Batch Script – Overview</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_environment.htm">Batch Script – Environment</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_commands.htm" style="background-color: rgb(214, 214, 214);">Batch Script – Commands</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_files.htm">Batch Script – Files</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_syntax.htm">Batch Script – Syntax</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_variables.htm">Batch Script – Variables</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_comments.htm">Batch Script – Comments</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_strings.htm">Batch Script – Strings</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_arrays.htm">Batch Script – Arrays</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_decision_making.htm">Batch Script – Decision Making</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_operators.htm">Batch Script – Operators</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_date_time.htm">Batch Script – DATE &amp; TIME</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_input_output.htm">Batch Script – Input / Output</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_return_code.htm">Batch Script – Return Code</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_functions.htm">Batch Script – Functions</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_process.htm">Batch Script – Process</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_aliases.htm">Batch Script – Aliases</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_devices.htm">Batch Script – Devices</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_registry.htm">Batch Script – Registry</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_network.htm">Batch Script – Network</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_printing.htm">Batch Script – Printing</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_debugging.htm">Batch Script – Debugging</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_logging.htm">Batch Script – Logging</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Batch Script Useful Resources</li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_quick_guide.htm">Batch Script - Quick Guide</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_useful_resources.htm">Batch Script - Useful Resources</a></li>
+<li><a href="https://www.tutorialspoint.com/batch_script/batch_script_discussion.htm">Batch Script - Discussion</a></li>
+</ul>
+<ul class="nav nav-list primary push-bottom left-menu special">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="https://www.tutorialspoint.com/upsc_ias_exams.htm">UPSC IAS Exams Notes</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>Batch Script – Commands</h1>
+<hr>
+<div style="padding-bottom:5px;padding-left:10px;text-align: center;">Advertisements</div>
+<div style="text-align: center;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="./Batch Script Commands_files/f(12).txt"> 
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:60px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent;"><iframe width="468" height="60" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:468px;height:60px;" src="./Batch Script Commands_files/saved_resource(1).html"></iframe></ins></ins>
+</div>
+<hr>
+<div class="pre-btn">
+<a href="https://www.tutorialspoint.com/batch_script/batch_script_environment.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="https://www.tutorialspoint.com/batch_script/batch_script_files.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr>
+<p>In this chapter, we will look at some of the frequently used batch commands.</p>
+<table class="table table-bordered">
+<tbody><tr>
+<th>S.No</th>
+<th style="text-align:center;">Commands &amp; Description</th>
+</tr>
+<tr>
+<td>1</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_ver.htm">VER</a>
+<p>This batch command shows the version of MS-DOS you are using.</p></td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_assoc.htm">ASSOC</a>
+<p>This is a batch command that associates an extension with a file type (FTYPE), displays existing associations, or deletes an association.</p></td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_cd.htm">CD</a>
+<p>This batch command helps in making changes to a different directory, or displays the current directory.</p></td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_cls.htm">CLS</a>
+<p>This batch command clears the screen.</p></td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_copy.htm">COPY</a>
+<p>This batch command is used for copying files from one location to the other.</p></td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_del.htm">DEL</a>
+<p>This batch command deletes files and not directories.</p></td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_dir.htm">DIR</a>
+<p>This batch command lists the contents of a directory.</p></td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_date.htm">DATE</a>
+<p>This batch command help to find the system date.</p></td>
+</tr>
+<tr>
+<td>9</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_echo.htm">ECHO</a>
+<p>This batch command displays messages, or turns command echoing on or off.</p></td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_exit.htm">EXIT</a>
+<p>This batch command exits the DOS console.</p></td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_md.htm">MD</a>
+<p>This batch command creates a new directory in the current location.</p></td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_move.htm">MOVE</a>
+<p>This batch command moves files or directories between directories.</p></td>
+</tr>
+<tr>
+<td>13</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_path.htm">PATH</a>
+<p>This batch command displays or sets the path variable.</p></td>
+</tr>
+<tr>
+<td>14</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_pause.htm">PAUSE</a>
+<p>This batch command prompts the user and waits for a line of input to be entered.</p></td>
+</tr>
+<tr>
+<td>15</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_prompt.htm">PROMPT</a>
+<p>This batch command can be used to change or reset the cmd.exe prompt.</p></td>
+</tr>
+<tr>
+<td>16</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_rd.htm">RD</a>
+<p>This batch command removes directories, but the directories need to be empty before they can be removed.</p></td>
+</tr>
+<tr>
+<td>17</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_ren.htm">REN</a>
+<p>Renames files and directories</p></td>
+</tr>
+<tr>
+<td>18</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_rem.htm">REM</a>
+<p>This batch command is used for remarks in batch files, preventing the content of the remark from being executed.</p></td>
+</tr>
+<tr>
+<td>19</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_start.htm">START</a>
+<p>This batch command starts a program in new window, or opens a document.</p></td>
+</tr>
+<tr>
+<td>20</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_time.htm">TIME</a>
+<p>This batch command sets or displays the time.</p></td>
+</tr>
+<tr>
+<td>21</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_type.htm">TYPE</a>
+<p>This batch command prints the content of a file or files to the output.</p></td>
+</tr>
+<tr>
+<td>22</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_vol.htm">VOL</a>
+<p>This batch command displays the volume labels.</p></td>
+</tr><tr>
+<td>23</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_attrib.htm">ATTRIB</a>
+<p>Displays or sets the attributes of the files in the curret directory</p></td>
+</tr>
+<tr>
+</tr><tr>
+<td>24</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_chkdsk.htm">CHKDSK</a>
+<p>This batch command checks the disk for any problems.</p></td>
+</tr>
+<tr>
+<td>25</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_choice.htm">CHOICE</a>
+<p>This batch command provides a list of options to the user.</p></td>
+</tr><tr>
+<td>26</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_cmd.htm">CMD</a>
+<p>This batch command invokes another instance of command prompt.</p></td>
+</tr><tr>
+<td>27</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_comp.htm">COMP</a>
+<p>This batch command compares 2 files based on the file size.</p></td>
+</tr><tr>
+<td>28</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_convert.htm">CONVERT</a>
+<p>This batch command converts a volume from FAT16 or FAT32 file system to NTFS file system.</p></td>
+</tr>
+<tr>
+<td>29</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_driverquery.htm">DRIVERQUERY</a>
+<p>This batch command shows all installed device drivers and their properties.</p></td>
+</tr>
+<tr>
+<td>30</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_expand.htm">EXPAND</a>
+<p>This batch command extracts files from compressed .cab cabinet files.</p></td>
+</tr>
+<tr>
+<td>31</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_find.htm">FIND</a>
+<p>This batch command searches for a string in files or input, outputting matching lines.</p></td>
+</tr>
+<tr>
+<td>32</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_format.htm">FORMAT</a>
+<p>This batch command formats a disk to use Windows-supported file system such as FAT, FAT32 or NTFS, thereby overwriting the previous content of the disk.</p></td>
+</tr>
+<tr>
+<td>33</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_help.htm">HELP</a>
+<p>This batch command shows the list of Windows-supplied commands.</p></td>
+</tr>
+<tr>
+<td>34</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_ipconfig.htm">IPCONFIG</a>
+<p>This batch command displays Windows IP Configuration. Shows configuration by connection and the name of that connection.</p></td>
+</tr>
+<tr>
+<td>35</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_label.htm">LABEL</a>
+<p>This batch command adds, sets or removes a disk label.</p></td>
+</tr>
+<tr>
+<td>36</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_more.htm">MORE</a>
+<p>This batch command displays the contents of a file or files, one screen at a time.</p></td>
+</tr>
+<tr>
+<td>37</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_net.htm">NET</a>
+<p>Provides various network services, depending on the command used.</p></td>
+</tr>
+<tr>
+<td>38</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_ping.htm">PING</a>
+<p>This batch command sends ICMP/IP "echo" packets over the network to the designated address.</p></td>
+</tr>
+<tr>
+<td>39</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_shutdown.htm">SHUTDOWN</a>
+<p>This batch command shuts down a computer, or logs off the current user.</p></td>
+</tr>
+<tr>
+<td>40</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_sort.htm">SORT</a>
+<p>This batch command takes the input from a source file and sorts its contents alphabetically, from A to Z or Z to A. It prints the output on the console.</p></td>
+</tr>
+<tr>
+<td>41</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_subst.htm">SUBST</a>
+<p>This batch command assigns a drive letter to a local folder, displays current assignments, or removes an assignment.</p></td>
+</tr>
+<tr>
+<td>42</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_systeminfo.htm">SYSTEMINFO</a>
+<p>This batch command shows configuration of a computer and its operating system.</p></td>
+</tr>
+<tr>
+<td>43</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_taskkill.htm">TASKKILL</a>
+<p>This batch command ends one or more tasks.</p></td>
+</tr>
+<tr>
+<td>44</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_tasklist.htm">TASKLIST</a>
+<p>This batch command lists tasks, including task name and process id (PID).</p></td>
+</tr><tr>
+<td>45</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_xcopy.htm">XCOPY</a>
+<p>This batch command copies files and directories in a more advanced way.</p></td>
+</tr><tr>
+<td>46</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_tree.htm">TREE</a>
+<p>This batch command displays a tree of all subdirectories of the current directory to any level of recursion or depth.</p></td>
+</tr><tr>
+<td>47</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_fc.htm">FC</a>
+<p>This batch command lists the actual differences between two files.</p></td>
+</tr><tr>
+<td>48</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_diskpart.htm">DISKPART</a>
+<p>This batch command shows and configures the properties of disk partitions.</p></td>
+</tr>
+<tr>
+<td>49</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_title.htm">TITLE</a>
+<p>This batch command sets the title displayed in the console window.</p></td>
+</tr>
+<tr>
+<td>50</td>
+<td><a href="https://www.tutorialspoint.com/batch_script/batch_script_set.htm">SET</a>
+<p>Displays the list of environment variables on the current system.</p></td>
+</tr>
+</tbody></table>
+<hr>
+<div class="pre-btn">
+<a href="https://www.tutorialspoint.com/batch_script/batch_script_environment.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="https://www.tutorialspoint.com/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a>
+</div>
+<div class="nxt-btn">
+<a href="https://www.tutorialspoint.com/batch_script/batch_script_files.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<hr>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script src="./Batch Script Commands_files/f(12).txt">
+</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:400px;margin:0;padding:0;position:relative;visibility:visible;width:580px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:400px;margin:0;padding:0;position:relative;visibility:visible;width:580px;background-color:transparent;"><iframe width="580" height="400" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;width:580px;height:400px;" src="./Batch Script Commands_files/saved_resource(2).html"></iframe></ins></ins>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<div class="simple-ad">
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://www.facebook.com/sharer.php?u=&#39; + &#39;https://www.tutorialspoint.com/batch_script/batch_script_commands.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Batch Script Commands_files/facebookIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://twitter.com/share?url=&#39; + &#39;https://www.tutorialspoint.com/batch_script/batch_script_commands.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Batch Script Commands_files/twitterIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://www.linkedin.com/cws/share?url=&#39; + &#39;https://www.tutorialspoint.com/batch_script/batch_script_commands.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Batch Script Commands_files/linkedinIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://plus.google.com/share?url=https://www.tutorialspoint.com/batch_script/batch_script_commands.htm&#39;,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Batch Script Commands_files/googlePlusIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://www.stumbleupon.com/submit?url=https://www.tutorialspoint.com/batch_script/batch_script_commands.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=456,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Batch Script Commands_files/StumbleUponIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open(&#39;https://reddit.com/submit?url=https://www.tutorialspoint.com/batch_script/batch_script_commands.htm&amp;title=&#39;+ document.title,&#39;sharer&#39;,&#39;toolbar=0,status=0,width=626,height=656,top=&#39;+sTop+&#39;,left=&#39;+sLeft);return false;">
+<img src="./Batch Script Commands_files/reddit.jpg" alt="img">
+</a>
+</div>
+<div class="rightgooglead">
+<script><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script src="./Batch Script Commands_files/f(12).txt">
+</script><ins id="aswift_2_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;width:300px;height:250px;" src="./Batch Script Commands_files/saved_resource(3).html"></iframe></ins></ins>
+</div>
+<div class="rightgooglead">
+<script><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script src="./Batch Script Commands_files/f(12).txt">
+</script><ins id="aswift_3_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;width:300px;height:600px;" src="./Batch Script Commands_files/saved_resource(4).html"></iframe></ins></ins>
+</div>
+<div class="rightgooglead">
+<script><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script src="./Batch Script Commands_files/f(12).txt">
+</script><ins id="aswift_4_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;" data-ad-slot="right_side_ad"><ins id="aswift_4_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;width:300px;height:250px;" src="./Batch Script Commands_files/saved_resource(5).html"></iframe></ins></ins>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="https://www.tutorialspoint.com/index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="./Batch Script Commands_files/logo-footer.png"> </a>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <nav id="sub-menu">
+      <ul>
+         <li><a href="https://www.tutorialspoint.com/about/faq.htm">FAQ's</a></li>
+         <li><a href="https://www.tutorialspoint.com/about/about_privacy.htm#cookies">Cookies Policy</a></li>
+         <li><a href="https://www.tutorialspoint.com/about/contact_us.htm">Contact</a></li>
+      </ul>
+   </nav>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12">
+<p>© Copyright 2018. All Rights Reserved.</p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <div class="news-group">
+      <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == &#39;Enter email for newsletter...&#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Enter email for newsletter...&#39;;}">
+      <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span>
+      <div id="newsresponse"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Libs -->
+<script src="./Batch Script Commands_files/custom-min.js.download"></script><a class="scroll-to-top" href="https://www.tutorialspoint.com/#" id="scrollToTop"><i class="icon icon-chevron-up icon-white"></i></a>
+<script src="./Batch Script Commands_files/urchin.js.download">
+</script>
+<script>
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+
+
+
+<div class="autocomplete-suggestions " style="top: 899.25px; left: 0px; width: 9px;"></div><iframe id="google_osd_static_frame_3374950550695" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Batch Script Commands_files/saved_resource(6).html"></iframe></body><iframe id="google_shimpl" style="display: none;" src="./Batch Script Commands_files/saved_resource(7).html"></iframe></html>
